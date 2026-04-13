@@ -81,21 +81,6 @@ export default function Process() {
                     {STEPS.map((s, i) => <StepCard key={s.num} step={s} index={i} />)}
                 </div>
 
-                {/* Timeline */}
-                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "24px 32px", background: card, border: `1.5px solid ${border}`, borderRadius: 6, overflowX: "auto", gap: 0, marginBottom: 48 }}>
-                    {STEPS.map((s, i) => (
-                        <div key={s.num} style={{ display: "flex", alignItems: "center", flex: i < 3 ? 1 : 0, minWidth: 0 }}>
-                            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8, flexShrink: 0 }}>
-                                <div style={{ width: 34, height: 34, borderRadius: "50%", border: `1.5px solid ${teal}`, background: "rgba(0,85,80,0.06)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                                    <span style={{ fontFamily: serif, fontSize: 14, fontWeight: 600, color: teal }}>{i + 1}</span>
-                                </div>
-                                <span style={{ fontFamily: sans, fontSize: 10, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: textMid, whiteSpace: "nowrap" }}>{s.title}</span>
-                            </div>
-                            {i < 3 && <div style={{ flex: 1, height: 1.5, margin: "0 10px", marginBottom: 24, background: `rgba(0,85,80,0.15)` }} />}
-                        </div>
-                    ))}
-                </motion.div>
-
                 <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }} style={{ textAlign: "center" }}>
                     <p style={{ fontFamily: sans, fontSize: 14, fontWeight: 300, color: textMid, marginBottom: 22 }}>Prêt à découvrir ce que votre biologie révèle ?</p>
                     <a href="https://calendly.com/eolyalabs/30min" target="_blank" rel="noopener noreferrer"
