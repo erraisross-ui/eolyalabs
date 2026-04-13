@@ -1,7 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-body { background: #FFFFFF; color: #0D1F1C; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
-::selection { background: rgba(0,160,80,0.15); color: #0D1F1C; }
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #F6FAF9; }
-::-webkit-scrollbar-thumb { background: rgba(0,85,80,0.25); border-radius: 3px; }
+body { background: #F9F8F6; color: #2C2C2C; font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+::selection { background: rgba(138,154,142,0.2); color: #2C2C2C; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #F9F8F6; }
+::-webkit-scrollbar-thumb { background: rgba(138,154,142,0.4); border-radius: 4px; }
