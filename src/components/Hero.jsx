@@ -53,13 +53,6 @@ export default function Hero() {
 
             <div style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", maxWidth: 860, width: "100%" }}>
 
-                <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} style={{ marginBottom: 40 }}>
-                    <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", border: `1.5px solid ${border}`, borderRadius: 999, background: bg2 }}>
-                        <span style={{ display: "block", width: 7, height: 7, borderRadius: "50%", background: green }} />
-                        <span style={{ fontFamily: sans, fontSize: 11, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: teal }}>Clinique d'optimisation biologique — Québec</span>
-                    </div>
-                </motion.div>
-
                 <div style={{ marginBottom: 24 }}>
                     {[
                         { t: "L'expertise biologique", bold: false, delay: 0.2 },
@@ -94,10 +87,10 @@ export default function Hero() {
                 <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 1.1 }} style={{ width: "100%", marginTop: 64, paddingTop: 32, borderTop: `1px solid ${border}`, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "16px 56px" }}>
                     {STATS.map(({ value, unit, label }) => (
                         <div key={label} style={{ textAlign: "center" }}>
-                            <span style={{ display: "block", fontFamily: serif, fontSize: 40, fontWeight: 600, color: teal, lineHeight: 1, marginBottom: 6 }}>
-                                {value}<em style={{ color: green, fontStyle: "normal", fontSize: 28 }}>{unit}</em>
+                            <span style={{ display: "block", fontFamily: sans, fontSize: 36, fontWeight: 700, color: teal, lineHeight: 1, marginBottom: 6, letterSpacing: "-0.02em" }}>
+                                {value}<em style={{ color: green, fontStyle: "normal", fontSize: 24, fontWeight: 600 }}>{unit}</em>
                             </span>
-                            <span style={{ fontFamily: sans, fontSize: 11, color: textLt, letterSpacing: "0.06em" }}>{label}</span>
+                            <span style={{ fontFamily: sans, fontSize: 11, fontWeight: 400, color: textLt, letterSpacing: "0.04em" }}>{label}</span>
                         </div>
                     ))}
                 </motion.div>
