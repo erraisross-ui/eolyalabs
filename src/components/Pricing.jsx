@@ -73,7 +73,7 @@ function PlanCard({ plan, index }) {
                 <h3 style={{ fontFamily: serif, fontSize: 36, fontWeight: 600, color: featured ? "#fff" : text, lineHeight: 1.05, marginBottom: 6 }}>{name}</h3>
                 <p style={{ fontFamily: sans, fontSize: 13, fontWeight: 300, color: featured ? "rgba(255,255,255,0.6)" : textLt, lineHeight: 1.6, marginBottom: 24 }}>{tagline}</p>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 4 }}>
-                    <span style={{ fontFamily: serif, fontSize: 52, fontWeight: 600, lineHeight: 1, color: featured ? "#fff" : teal }}>{price}</span>
+                    <span style={{ fontFamily: "'DM Serif Display', serif", fontSize: 56, fontWeight: 400, lineHeight: 1, color: featured ? "#fff" : teal }}>{price}</span>
                     <span style={{ fontFamily: sans, fontSize: 13, color: featured ? "rgba(255,255,255,0.5)" : textLt, marginLeft: 6 }}>$ CAD</span>
                 </div>
                 <p style={{ fontFamily: sans, fontSize: 11, color: featured ? "rgba(255,255,255,0.4)" : textLt, marginBottom: 18 }}>Paiement unique · Protocole de 4 semaines</p>

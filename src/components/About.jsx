@@ -16,7 +16,7 @@ const sans    = "'Inter', system-ui, sans-serif"
 
 const FOUNDERS = [
     {
-        initial:   "A",
+        photo:     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=750&q=80",
         role:      "Co-fondateur",
         name:      "Abdessamad Hilalou",
         specialty: "Stratégie & Performance biologique",
@@ -26,7 +26,7 @@ const FOUNDERS = [
         quote:     "« Un seul résultat hors-plage ne dit rien. C'est leur corrélation qui révèle tout. »",
     },
     {
-        initial:   "E",
+        photo:     "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&h=750&q=80",
         role:      "Co-fondatrice",
         name:      "Eolie Laforce",
         specialty: "Optimisation & Nutrition clinique",
@@ -37,17 +37,15 @@ const FOUNDERS = [
     },
 ]
 
-function PhotoPlaceholder({ founder }) {
+function Photo({ founder }) {
     return (
-        <div style={{ width: "100%", aspectRatio: "3/4", background: `linear-gradient(145deg, #EDF5F3 0%, #D8EDE8 100%)`, borderRadius: "6px 6px 0 0", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
-            <div style={{ position: "absolute", inset: 0, opacity: 0.4, backgroundImage: `linear-gradient(rgba(0,85,80,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,85,80,0.08) 1px, transparent 1px)`, backgroundSize: "40px 40px" }} />
-            <div style={{ width: 96, height: 96, borderRadius: "50%", border: `2px solid rgba(0,85,80,0.2)`, background: "rgba(0,85,80,0.06)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16, position: "relative", zIndex: 1 }}>
-                <span style={{ fontFamily: serif, fontSize: 52, fontWeight: 300, color: "rgba(0,85,80,0.4)", lineHeight: 1 }}>{founder.initial}</span>
-            </div>
-            <p style={{ fontFamily: sans, fontSize: 11, color: tealLt, textAlign: "center", padding: "0 24px", position: "relative", zIndex: 1, lineHeight: 1.6 }}>
-                Photo professionnelle<br />haute résolution
-            </p>
-            <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "30%", background: `linear-gradient(to top, ${card}, transparent)` }} />
+        <div style={{ width: "100%", aspectRatio: "3/4", overflow: "hidden", borderRadius: "6px 6px 0 0", position: "relative" }}>
+            <img
+                src={founder.photo}
+                alt={founder.name}
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+            />
+            <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "35%", background: `linear-gradient(to top, ${card}, transparent)` }} />
         </div>
     )
 }
@@ -72,7 +70,7 @@ function FounderCard({ founder, index }) {
         >
             {/* Top bar */}
             <div style={{ height: 3, background: hov ? green : "transparent", transition: "background 0.3s ease" }} />
-            <PhotoPlaceholder founder={founder} />
+            <Photo founder={founder} />
             <div style={{ padding: "28px 28px 32px", display: "flex", flexDirection: "column", flex: 1 }}>
                 <p style={{ fontFamily: sans, fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: green, marginBottom: 8 }}>{founder.role}</p>
                 <h3 style={{ fontFamily: serif, fontSize: 28, fontWeight: 600, color: text, lineHeight: 1.1, marginBottom: 4 }}>{founder.name}</h3>
