@@ -19,7 +19,7 @@ const PLANS = [
       desc: "Le point de départ pour comprendre vos fondations biologiques. Identifiez vos carences critiques et mettez fin à la fatigue chronique.",
       markers: ["Formule sanguine complète (FSC)", "Ferritine & fer sérique", "Vitamine D (25-OH)", "Vitamine B12 & folates", "Magnésium & zinc", "TSH — thyroïde de base", "Glycémie à jeun & HbA1c", "CRP — inflammation", "Bilan hépatique (ALT, AST, GGT)"],
       ideal: "Épuisement chronique, manque de concentration, récupération difficile malgré un mode de vie sain." },
-    { name: "Métabolique", tagline: "Focus perte de gras, insuline et thyroïde",  price: "897",   featured: true,  badge: "Best-Seller",
+    { name: "Métabolique", tagline: "Focus perte de gras, insuline et thyroïde",  price: "897",   featured: true,  badge: "Le plus populaire",
       desc: "Notre protocole le plus demandé. Décryptez votre métabolisme profond et transformez votre composition corporelle avec précision clinique.",
       markers: ["Tout du forfait Vitalité, plus :", "Insuline à jeun", "HOMA-IR (résistance à l'insuline)", "Bilan lipidique complet (LDL, ApoB)", "T3 libre + T4 libre (thyroïde étendue)", "Cortisol matinal", "DHEA-S", "Leptine & ghréline", "Homocystéine & acide urique", "Adiponectine"],
       ideal: "Prise de gras persistante, fringales incontrôlables, métabolisme bloqué malgré les efforts." },
