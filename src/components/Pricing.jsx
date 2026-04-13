@@ -146,7 +146,7 @@ export default function Pricing() {
                 </div>
 
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12, marginBottom: 32 }}>
-                    {["Requête officielle émise par nos soins", "Analysé par les deux experts ensemble", "Protocole remis sous 48 à 72 heures", "Appel de remise de résultats inclus"].map(l => (
+                    {["Requête officielle émise par nos soins", "Analysé par les deux experts ensemble", "Protocole remis sous 48h", "Appel de remise de résultats inclus"].map(l => (
                         <div key={l} style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 10, padding: "20px 16px", background: bg, border: `1.5px solid ${border}`, borderRadius: 6 }}>
                             <span style={{ color: green, fontSize: 18 }}>✦</span>
                             <span style={{ fontFamily: sans, fontSize: 12, fontWeight: 400, color: textMid, lineHeight: 1.55 }}>{l}</span>
