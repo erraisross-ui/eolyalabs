@@ -26,6 +26,7 @@ const PLANS = [
     { name: "Élite",       tagline: "Focus hormones, performance et longévité",   price: "1 297", featured: false, badge: null,
       desc: "Le protocole ultime pour les performeurs exigeants. Optimisez votre capital hormonal complet et repoussez vos limites biologiques.",
       markers: ["Tout du forfait Métabolique, plus :", "Testostérone totale & libre", "SHBG (Sex Hormone Binding Globulin)", "Oestradiol (E2) & progestérone", "LH & FSH & prolactine", "IGF-1 (axe hormone de croissance)", "Cortisol soir (cycle circadien)", "Anti-TPO & anti-thyroglobuline", "Oméga-3 Index", "Panel acides aminés essentiels"],
+      note: "Note : Certains tests hormonaux nécessitent un prélèvement à un moment précis du cycle pour les femmes.",
       ideal: "Athlètes, entrepreneurs et performeurs qui refusent de fonctionner en dessous de leur maximum biologique." },
 ]
 
@@ -40,7 +41,7 @@ function Check({ featured }) {
 function PlanCard({ plan, index }) {
     const [hov, setHov] = useState(false)
     const [ctaHov, setCtaHov] = useState(false)
-    const { name, tagline, price, desc, markers, ideal, featured, badge } = plan
+    const { name, tagline, price, desc, markers, note, ideal, featured, badge } = plan
 
     return (
         <motion.div
@@ -95,6 +96,12 @@ function PlanCard({ plan, index }) {
                 </ul>
             </div>
 
+            {note && (
+                <div style={{ margin: "0 28px 16px", padding: "10px 14px", background: "rgba(0,85,80,0.04)", border: `1px solid rgba(0,85,80,0.12)`, borderRadius: 4, display: "flex", gap: 8, alignItems: "flex-start" }}>
+                    <span style={{ color: teal, fontSize: 12, flexShrink: 0, marginTop: 1 }}>ⓘ</span>
+                    <p style={{ fontFamily: sans, fontSize: 11, fontWeight: 300, color: textMid, lineHeight: 1.6, fontStyle: "italic" }}>{note}</p>
+                </div>
+            )}
             <div style={{ margin: "0 28px 20px", padding: "14px 16px", background: featured ? "rgba(255,255,255,0.07)" : bg2, border: `1px solid ${featured ? "rgba(255,255,255,0.1)" : border}`, borderRadius: 4 }}>
                 <p style={{ fontFamily: sans, fontSize: 9, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: featured ? "rgba(255,255,255,0.4)" : textLt, marginBottom: 5 }}>Ce forfait est pour vous si</p>
                 <p style={{ fontFamily: sans, fontSize: 12, fontWeight: 300, color: featured ? "rgba(255,255,255,0.65)" : textMid, lineHeight: 1.65 }}>{ideal}</p>
